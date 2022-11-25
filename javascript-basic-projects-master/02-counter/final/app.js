@@ -4,11 +4,13 @@ let count = 0;
 const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".btn");
 
+console.log();
 
 btns.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
-
-    const classes = e.currentTarget.classList;
+    console.log(e);
+    // const classes = e.currentTarget.classList;
+    const classes = e.target.classList;
 
     if (classes.contains("decrease")) {
       count--;
