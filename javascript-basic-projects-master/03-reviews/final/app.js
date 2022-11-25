@@ -50,13 +50,18 @@ const ransomBtn = document.querySelector(".random-btn");
 
 let reviewNum = 0;
 
-// // load initial item
-window.addEventListener("DOMContentLoaded", function () {
-  //   const item = reviews[currentItem];
+function showperson() {
+
   img.src = reviews[reviewNum].img;
   author.textContent = reviews[reviewNum].name;
   job.textContent = reviews[reviewNum].job;
   info.textContent = reviews[reviewNum].text;
+}
+
+// // load initial item
+window.addEventListener("DOMContentLoaded", function () {
+  //   const item = reviews[currentItem];
+  showperson();
 });
 
 
@@ -69,11 +74,22 @@ prevBtn.addEventListener("click", function (e) {
     reviewNum--;
 
   }
+  showperson();
 
-  img.src = reviews[reviewNum].img;
-  author.textContent = reviews[reviewNum].name;
-  job.textContent = reviews[reviewNum].job;
-  info.textContent = reviews[reviewNum].text;
+
+})
+
+nextBtn.addEventListener("click", function (e) {
+
+  if (reviewNum === (reviews.length - 1)) {
+
+    reviewNum = 0;
+  } else {
+    reviewNum++;
+
+  }
+  showperson();
+
 
 })
 
