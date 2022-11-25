@@ -54,7 +54,7 @@ window.addEventListener("DOMContentLoaded", function () {
   showperson();
 });
 
-prevBtn.addEventListener("click", function (e) {
+prevBtn.addEventListener("click", function () {
   if (reviewNum === 0) {
     reviewNum = reviews.length - 1;
   } else {
@@ -63,7 +63,7 @@ prevBtn.addEventListener("click", function (e) {
   showperson();
 });
 
-nextBtn.addEventListener("click", function (e) {
+nextBtn.addEventListener("click", function () {
   if (reviewNum === reviews.length - 1) {
     reviewNum = 0;
   } else {
@@ -72,7 +72,7 @@ nextBtn.addEventListener("click", function (e) {
   showperson();
 });
 
-randomBtn.addEventListener("click", function (e) {
+randomBtn.addEventListener("click", function () {
   reviewNum = Math.floor(Math.random() * reviews.length);
   showperson();
 });
