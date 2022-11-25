@@ -46,7 +46,7 @@ const info = document.getElementById("info");
 
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
-const ransomBtn = document.querySelector(".random-btn");
+const randomBtn = document.querySelector(".random-btn");
 
 let reviewNum = 0;
 
@@ -88,6 +88,14 @@ nextBtn.addEventListener("click", function (e) {
     reviewNum++;
 
   }
+  showperson();
+
+
+})
+
+randomBtn.addEventListener("click", function (e) {
+
+  reviewNum = Math.floor(Math.random() * reviews.length)
   showperson();
 
 
